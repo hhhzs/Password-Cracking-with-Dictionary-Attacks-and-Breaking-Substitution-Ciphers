@@ -1,0 +1,15 @@
+This is a really interesting project lol!
+1: The first thing i figured out is if SALT/Leet speak can be used together, once i figured out they are independent, 
+I decide to use exclusive method to make life easier.
+2: Second I figured out the difference between MD5/SHA1/SHA256/SHA512. I got that these hash algo take different length of input. 
+3: By using easy md5/sha256/sha512 function i figured out user1/5/6 password and knew they didn't use SALT or Leet speak
+4: Since user3 is caesar cipher and user7 is a substitution cipher, which left user2 and user4 with SALT and Leet speak
+5: I assumed user4 used Leet speak and decoded it with my leet speak cracker function, which give me the correct answer and left user2 with SALT
+6: As long as I know SALT is 5 digit int from 00000 to 99999, I generated all the possible SALT and combine them with each word from dictionary and
+then brute forced to find the real password. (It took almost 30min to check all the combos)
+7: Caesar cipher is the easiest part for me since I did a Caesar cipher decoder in C++ in CS141. There are only 26 possibilities for caesar cipher shift, so 
+brute forced it yeahhh
+8: user7 used his/her/its own cipher, the first thing that came up to my mind is to find the mapping key. In case to do it, I have to do a sequence anaylsis on the
+encrypted text and compare with english letter sequence. But since given text is not a legit dataset that big enough to give the accurate sequence, I have to play 
+around a little bit with mapping. Based on my old experience, it would help to try to figure out a single word ( for example u already get the mapping for letter f 
+and letter r, then u saw a word "ftr". There's a higher chance that t is going to map to o) 

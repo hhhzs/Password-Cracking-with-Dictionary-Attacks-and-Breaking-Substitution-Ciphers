@@ -1,0 +1,14 @@
+I didnt really get any problem with part 2 since I did similar assignment before. The way I approached it is to first count letter frequence in
+given text, then compare with English letter frequence. But I know since given text is not a big dataset it wont give me the accurate frequence,
+so i have to try multi times to get the final text. First just map it by frequence, run the decoder, and see if there are any readable words(for 
+example: if I see "ftr" after first guess, i will assume is "for". I adjusted it and run it again to see if the text became more readble. After doing
+this approach 3-4 rounds, the whole text became pretty readable and few more rounds will give me the correct text)
+
+
+
+
+resources:
+https://stackoverflow.com/questions/18603860/sorting-and-organization-of-letter-frequency-python
+https://stackoverflow.com/questions/40559526/generate-all-possible-5-digit-numbers-from-format-00000-to-99999-using-python
+http://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
+https://www.geeksforgeeks.org/python-frequency-of-each-character-in-string/
